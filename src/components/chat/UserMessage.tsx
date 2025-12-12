@@ -103,7 +103,7 @@ export function UserMessage({ message, isLoading }: UserMessageProps) {
       <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="relative flex flex-col gap-1"
+        className="relative flex min-w-0 max-w-full flex-col gap-1"
       >
         {message.content.error ? (
           <div className="rounded-lg bg-adam-bg-secondary-dark">
@@ -140,7 +140,7 @@ export function UserMessage({ message, isLoading }: UserMessageProps) {
             {(isEditing || (input && input.length > 0)) && (
               <div
                 className={cn(
-                  'relative grid w-fit rounded-lg text-white',
+                  'relative grid max-w-full rounded-lg text-white',
                   (hovering || message.content.images) && 'bg-adam-neutral-800',
                 )}
               >
@@ -151,18 +151,18 @@ export function UserMessage({ message, isLoading }: UserMessageProps) {
                     onChange={(e) => {
                       setInput(e.target.value);
                     }}
-                    className="block h-auto min-h-0 w-full resize-none overflow-hidden whitespace-pre-line break-words border-none bg-adam-neutral-800 px-3 py-2 text-sm sm:px-4"
+                    className="block h-auto min-h-0 w-full resize-none overflow-hidden whitespace-pre-line break-all border-none bg-adam-neutral-800 px-3 py-2 text-sm sm:px-4"
                     rows={1}
                     style={{ gridArea: '1 / -1' }}
                   />
                 )}
                 <div
                   className={cn(
-                    'pointer-events-none col-start-1 row-start-1 overflow-hidden whitespace-pre-wrap break-words px-3 py-2 text-sm sm:px-4',
+                    'pointer-events-none col-start-1 row-start-1 overflow-hidden whitespace-pre-wrap break-all px-3 py-2 text-sm sm:px-4',
                     isEditing ? 'opacity-0' : '',
                   )}
                 >
-                  <span>{input}</span>
+                  <span className="break-all">{input}</span>
                   <br />
                 </div>
               </div>
