@@ -12,8 +12,6 @@ Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in
 
 2. **Create your changes** - Make your changes in your fork and open a PR from that fork.
 
-   ![Contribute](https://docs.github.com/assets/cb-75385/mw-1440/images/help/pull_requests/pull-request-start-review-button.webp)
-
 3. **Update the PR description** - Include details of the changes. Link the issue if relevant.
 
 4. **Allow maintainer edits** - Be sure to check the box to "Allow edits from maintainer". This allows maintainers to update your PR if necessary which speeds up the review process. [Learn more here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).
