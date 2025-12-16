@@ -5,6 +5,10 @@
       "destination": "/cadam/index.html"
     },
     {
+      "source": "/cadam/",
+      "destination": "/cadam/index.html"
+    },
+    {
       "source": "/cadam/assets/:path*",
       "destination": "/cadam/assets/:path*"
     },
@@ -12,5 +16,6 @@
       "source": "/cadam/:path*",
       "destination": "/cadam/index.html"
     }
-  ]
+  ],
+  "trailingSlash": false
 }
