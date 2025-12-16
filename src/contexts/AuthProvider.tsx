@@ -90,20 +90,31 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       data: { user: currentUser },
     } = await supabase.auth.getUser();
 
+    const redirectTo = getRedirectUrl();
+
     if (currentUser?.is_anonymous) {
       // Try to add email to anonymous user
-      const { error } = await supabase.auth.updateUser({ email });
+      const { error } = await supabase.auth.updateUser(
+        { email },
+        { emailRedirectTo: redirectTo },
+      );
       if (error) {
         if (error.code === 'email_exists') {
           // Email belongs to another account, send OTP to sign in
-          await supabase.auth.signInWithOtp({ email });
+          await supabase.auth.signInWithOtp({
+            email,
+            options: { emailRedirectTo: redirectTo },
+          });
         } else {
           throw error;
         }
       }
     } else {
       // No anonymous session, just send OTP
-      await supabase.auth.signInWithOtp({ email });
+      await supabase.auth.signInWithOtp({
+        email,
+        options: { emailRedirectTo: redirectTo },
+      });
     }
   };
 
