@@ -54,6 +54,7 @@
 
 ### Example: Creating a parametric gear
 ![Gear Example](./demo/gear-example.png)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fedoscianca%2FCADAM.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fedoscianca%2FCADAM?ref=badge_shield)
 -->
 
 > 🎬 **Try it live:** https://adam.new/cadam
@@ -206,3 +207,6 @@ Components and attributions:
 Made with 💙 for the 3D printing and CAD community
 
 </div>
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fedoscianca%2FCADAM.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fedoscianca%2FCADAM?ref=badge_large)
